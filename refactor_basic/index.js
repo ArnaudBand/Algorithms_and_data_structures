@@ -1,10 +1,17 @@
-function charCount() {
-  // create an empty obj
-   // Create a for loop 
-  //  create a variable to make all characters in lowercase
-  // Check if there an empty space because we dont need to cout empty
-  // Check if the character is on the object
-  // Increment the character
-  // else to give a value of 1
-  // return the object
+function charCount(str) {
+  let res = {};
+  for(let i = 0; i < str.length; i++) {
+    let char = str[i].toLowerCase();
+
+    if(/[a-z0-9]/.test(char)) {
+      if(res[char] > 0) {
+        res[char]++;
+      } else {
+        res[char] = 1;
+      }
+    }
+  }
+  return res;
 }
+
+module.exports = charCount;
