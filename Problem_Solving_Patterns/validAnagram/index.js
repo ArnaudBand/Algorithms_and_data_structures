@@ -37,4 +37,4 @@ console.log(validAnagram('anagram', 'nagaram')); // true
 let t2 = performance.now();
 console.log(`Time Elapse ${(t2 - t1) / 1000} seconds.`)
 
-module.exports = same;
+module.exports = validAnagram;
