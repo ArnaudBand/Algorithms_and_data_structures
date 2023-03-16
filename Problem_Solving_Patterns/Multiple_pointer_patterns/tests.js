@@ -1,4 +1,5 @@
 const assert = require('assert');
+const sumZero = require('./index');
 
 describe('sumZero', function() {
   it('returns undefined when given an empty array', function() {
