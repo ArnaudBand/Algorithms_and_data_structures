@@ -1,0 +1,1 @@
+Write a function called maxSubarraySum which accepts an array of integers and number called n. The function should calculate the maximum sum of n consecutive elements in the array.
