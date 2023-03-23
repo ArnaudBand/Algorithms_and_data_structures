@@ -38,4 +38,6 @@ function findClosestTriplet(array, target) {
 // Test the function
 const array = [-1, 2, 1, -4];
 const target = 1;
-console.log(findClosestTriplet(array, target)); // Output: [-1, 1, 2]
+console.log(findClosestTriplet([5, 2, 3, 1, 8], 10)); // Output: [-1, 1, 2]
+
+module.exports = findClosestTriplet;
