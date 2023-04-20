@@ -1,8 +1,6 @@
 const isSubsequence = (str1, str2) => {
   if(str1.length === 0) return true;
 
-  // if(str1.length > str2.length) return false;
-
   let i = 0;
   let j = 0;
 
