@@ -22,7 +22,7 @@ describe('isSubsequence', function() {
     assert.strictEqual(isSubsequence('a', 'a'), true);
   });
 
-  it('should return true for "abc" and "ab"', function() {
+  it('should return false for "abc" and "ab"', function() {
     assert.strictEqual(isSubsequence('abc', 'ab'), false);
   });
 });
