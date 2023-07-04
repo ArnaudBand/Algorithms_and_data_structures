@@ -1,5 +1,5 @@
 const assert = require('assert');
-const fourSum = require('./index.js');
+const four_sum = require('./index');
 
 describe('fourSum', () => {
   it('should return the correct four-element combinations that sum to the target', () => {
@@ -10,7 +10,7 @@ describe('fourSum', () => {
       [-2, 0, 0, 2],
       [-1, 0, 0, 1]
     ];
-    const result = fourSum(nums, target);
+    const result = four_sum(nums, target);
     assert.deepStrictEqual(result, expected);
   });
 
@@ -18,15 +18,15 @@ describe('fourSum', () => {
     const nums = [];
     const target = 0;
     const expected = [];
-    const result = fourSum(nums, target);
+    const result = four_sum(nums, target);
     assert.deepStrictEqual(result, expected);
   });
 
   it('should handle a target that cannot be achieved', () => {
     const nums = [1, 2, 3, 4, 5];
     const target = 10;
-    const expected = [1, 2, 3, 4];
-    const result = fourSum(nums, target);
+    const expected = [[1, 2, 3, 4]];
+    const result = four_sum(nums, target);
     assert.deepStrictEqual(result, expected);
   });
 });
