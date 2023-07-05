@@ -39,4 +39,4 @@ The following algorithms are included in this repository:
 If you would like to contribute to this repository, please check the contribution guidelines and code of conduct. You can then fork the repository, create a new branch for your changes, and submit a pull request. Contributions are welcome in the form of bug fixes, new data structures and algorithms, and improved test cases.
 
 ## License
-This repository is licensed under the MIT License. See the LICENSE
+This repository is licensed under the MIT License. See the [LICENSE](https://github.com/ArnaudBand/Algorithms_and_data_structures/blob/main/LICENSE)
