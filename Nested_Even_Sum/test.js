@@ -33,6 +33,19 @@ describe('nestedEvenSum', () => {
           }
         }
       }
-      assert.strictEqual(nestedEvenSum(obj), 0)
-    })
+      assert.strictEqual(nestedEvenSum(obj), 0);
+    });
+
+    it('should handle empty objects and null values', () => {
+      const obj = {
+        a: {},
+        b: null,
+        c: {
+          d: {},
+          e: null
+        }
+      };
+  
+      assert.strictEqual(nestedEvenSum(obj), 0);
+    });
 })
