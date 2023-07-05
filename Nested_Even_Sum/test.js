@@ -19,5 +19,20 @@ describe('nestedEvenSum', () => {
             h: 10,
           };
           assert.strictEqual(nestedEvenSum(obj), 30);
-    }) 
+    });
+
+    it('should return 0 when in the nested object there no even number', () => {
+      let obj = {
+        a: 3,
+        b: {
+          c: 5,
+          d: {
+            e: {
+              h: 7
+            }
+          }
+        }
+      }
+      assert.strictEqual(nestedEvenSum(obj), 0)
+    })
 })
