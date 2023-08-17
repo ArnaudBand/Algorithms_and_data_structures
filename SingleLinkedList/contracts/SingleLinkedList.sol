@@ -38,4 +38,17 @@ contract SingleLinkedList {
       }
       nodes[current].next = nodes[nodes[current].next].next;
     }
+
+
+    function insert(uint256 index, uint256 _data) public {
+      require(index < nodes.length, "Index out of bounds");
+      nodes.push(Node(_data, 0));
+      uint256 current = head;
+      while (index > 0) {
+        current = nodes[current].next;
+        index--;
+      }
+      nodes[nodes.length - 1].next = nodes[current].next;
+      nodes[current].next = nodes.length - 1;
+    }
 }
