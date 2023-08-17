@@ -30,5 +30,15 @@ describe("", function () {
       const secondNode = await singleLinkedList.get(1);
       expect(secondNode).to.equal(0);
     });
+  });
+
+  describe("Insert", () => {
+    it("should insert a value into the list", async () => {
+      await singleLinkedList.append(0);
+      await singleLinkedList.append(2);
+      const current = await singleLinkedList.insert(1, 1);
+      const secondNode = await singleLinkedList.get(1);
+      expect(secondNode).to.equal(0);
+    });
   })
 });
