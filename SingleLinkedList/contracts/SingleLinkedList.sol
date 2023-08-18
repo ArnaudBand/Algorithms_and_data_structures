@@ -51,4 +51,27 @@ contract SingleLinkedList {
       nodes[nodes.length - 1].next = nodes[current].next;
       nodes[current].next = nodes.length - 1;
     }
+
+    function traversal() public view returns(uint256[] memory) {
+      uint256[] memory result = new uint256[](nodes.length - 1);
+      uint256 current = head;
+      uint256 index = 0;
+      while (nodes[current].next != 0) {
+        current = nodes[current].next;
+        result[index] = nodes[current].data;
+        index++;
+      }
+      return result;
+    }
+
+    function search(uint256 _data) public view returns(uint256) {
+      uint256 current = head;
+      while (nodes[current].next != 0) {
+        current = nodes[current].next;
+        if (nodes[current].data == _data) {
+          return current;
+        }
+      }
+      return 0;
+    }
 }
