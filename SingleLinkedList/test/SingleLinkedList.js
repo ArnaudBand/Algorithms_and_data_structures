@@ -40,5 +40,37 @@ describe("", function () {
       const secondNode = await singleLinkedList.get(1);
       expect(secondNode).to.equal(0);
     });
+  });
+
+  describe("Traversal", () => {
+    it("should traverse the list", async () => {
+      await singleLinkedList.append(0);
+      await singleLinkedList.append(1);
+      await singleLinkedList.append(2);
+      await singleLinkedList.append(3);
+      await singleLinkedList.append(4);
+      await singleLinkedList.append(5);
+
+      await singleLinkedList.traversal();
+
+      const current = await singleLinkedList.get(4);
+
+      expect(current).to.equal(3);
+    });
+  });
+
+  describe("Search", () => {
+    it("should search in the list", async () => {
+      await singleLinkedList.append(0);
+      await singleLinkedList.append(1);
+      await singleLinkedList.append(2);
+      await singleLinkedList.append(3);
+
+     const current = await singleLinkedList.search(5);
+
+      // await singleLinkedList.get(0);
+
+      expect(current).to.equal(0);
+    })
   })
 });
