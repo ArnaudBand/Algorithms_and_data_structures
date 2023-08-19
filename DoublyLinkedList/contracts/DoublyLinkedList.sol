@@ -29,12 +29,28 @@ contract DoublyLinkedList {
     size++;
   }
 
-  function get(uint256 _index) public view returns (uint256) {
+  function getAtIndex(uint256 _index) public view returns (uint256) {
     require(_index <= size, "Index out of bounds");
     uint256 current = head;
     for (uint256 i = 0; i <= _index; i++) {
       current = nodes[current].next;
     }
     return nodes[current].data;
+  }
+
+  function getLength() public view returns (uint256) {
+    return size;
+  }
+
+  function remove(uint256 _index) public {
+    require(_index <= size, "Index out of bounds");
+    uint256 current = head;
+    for (uint256 i = 0; i <= _index; i++) {
+      current = nodes[current].next;
+    }
+    nodes[nodes[current].prev].next = nodes[current].next;
+    nodes[nodes[current].next].prev = nodes[current].prev;
+    delete nodes[current];
+    size--;
   }
 }
