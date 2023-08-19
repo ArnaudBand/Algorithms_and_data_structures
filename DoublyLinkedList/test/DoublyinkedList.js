@@ -10,8 +10,21 @@ describe("DoublyLinkedList", function () {
   describe("Append", () => {
     it("Should append a node to the list", async () => {
       await dll.append(1);
-      expect(await dll.get(1)).to.equal(1);
+      const current = await dll.getAtIndex(1)
+      expect(current).to.equal(1);
     });
-  })
+  });
+
+  describe("Remove", () => {
+    it("should remove a node to the list", async () => {
+      await dll.append(1);
+      await dll.append(2);
+      await dll.append(3);
+
+      await dll.remove(1);
+      const current = await dll.getAtIndex(0)
+      expect(current).to.equal(2);
+    })
+  });
   
 });
