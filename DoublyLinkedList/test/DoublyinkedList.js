@@ -27,4 +27,14 @@ describe("DoublyLinkedList", function () {
     })
   });
   
+  describe("Get the length", () => {
+    it("should return the length of the list", async () => {
+      await dll.append(0);
+      await dll.append(20);
+
+      const length = await dll.getLength();
+
+      expect(length).to.equal(2)
+    });
+  })
 });
